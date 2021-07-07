@@ -1,0 +1,33 @@
+
+<l-loadmore show end-text="闹不机密" type="{{loadingType}}">
+  
+    <view slot="content" class="container">
+        <image class="top-theme" src="{{themeA.entrance_img}}"></image>
+
+        <swiper class="swiper" indicator-dots="true" indicator-active-color="#157658" autoplay="true" circular="true" >
+            <block wx:for="{{bannerB.items}}" wx:key="key">
+                <swiper-item>
+                    <image class="swiper" src="{{item.img}}"></image>
+                </swiper-item>
+            </block>
+        </swiper>
+
+        <s-category-grid grid="{{grid}}"></s-category-grid>
+
+
+        <image data-aname="a-2" bind:tap="onGOToCoupons" class="activity" src="{{activityD.entrance_img}}"></image>
+
+        <s-spu-scroll wx:if="{{themeE.online}}" theme="{{themeE}}" spu-list="{{themeESpu}}"></s-spu-scroll>
+
+        <image src="{{themeF.entrance_img}}" class="quality">  </image>
+
+        <s-hot-list banner="{{bannerG}}"></s-hot-list>
+        <image class="fashion" src="{{themeH.entrance_img}}"></image>
+
+        <view class="spu-bottom">
+            <image class="title-spu-bottom" src="/imgs/home/title@interest.png"></image>
+            <l-water-flow generic:l-water-flow-item="s-spu-preview"></l-water-flow>
+        </view>
+
+    </view>
+</l-loadmore>
